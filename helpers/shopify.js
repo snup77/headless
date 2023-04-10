@@ -39,6 +39,8 @@ export const AllProducts = gql`
             edges {
               node {
                 url
+                width
+                height
               }
             }
           }
@@ -75,6 +77,8 @@ export const singleProduct = gql`
         edges {
           node {
             url
+            width
+            height
           }
         }
       }

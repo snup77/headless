@@ -30,14 +30,14 @@ function ProductDetails({ productData }) {
         max-w-7xl
       "
     >
-      <div className="w-full flex flex-1 bg-gray-100">
-        <div className="h-96 py-16 p10 flex flex-1 justify-center items-center w-full h-full relative">
+      <div className="w-full flex flex-1">
+        <div className="w-full h-full relative">
           <Image
             src={imageNode.url}
-            alt="Inventory item"
-            className="object-scale-down max-h-full"
-            layout='fill'
-            objectFit='contain'
+            alt=""
+            width={imageNode.width}
+            height={imageNode.height}
+            layout="responsive"
           />
         </div>
       </div>
