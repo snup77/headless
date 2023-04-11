@@ -53,7 +53,7 @@ function ProductDetails({ productData }) {
         <p className="text-gray-600 leading-7">{description}</p>
         <div className="my-6"></div>
         <button
-          className="text-sm font-bold tracking-wider bg-black text-white font-semibold py-4 px-12 border-2 border-black hover:border-transparent w-full"
+          className="text-sm tracking-wider bg-black text-white font-semibold py-4 px-12 border-2 border-black hover:border-transparent w-full"
           onClick={checkout}
         >
           {isLoading && (
