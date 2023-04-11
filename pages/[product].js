@@ -37,7 +37,7 @@ function ProductDetails({ productData }) {
             alt=""
             width={imageNode.width}
             height={imageNode.height}
-            layout="responsive"
+            className="w-full h-auto"
           />
         </div>
       </div>

@@ -20,16 +20,14 @@ function ProductCard({ product }) {
     p-2
   "
     >
-      <Link href={`/${handle}`}>
-        <a aria-label="Mod Leather Sofa">
-          <Image
-            alt="couch6"
-            src={imageNode.url}
-            width={imageNode.width}
-            height={imageNode.height}
-            layout="responsive"
-          />
-        </a>
+      <Link href={`/${handle}`} passHref>
+        <Image
+          alt=""
+          src={imageNode.url}
+          width={imageNode.width}
+          height={imageNode.height}
+          className="w-full h-auto"
+        />
       </Link>
       <div>
         <p className="m-4 text-center text-l font-semibold mb-1">{title}</p>
