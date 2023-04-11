@@ -1,9 +1,8 @@
 const domain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN
-const storefrontAccessToken =
-  process.env.NEXT_PUBLIC_SHOPIFY_STORE_FRONT_ACCESS_TOKEN
+const storefrontAccessToken = process.env.NEXT_PUBLIC_SHOPIFY_STORE_FRONT_ACCESS_TOKEN
 
 export async function callShopify(query, variables = {}) {
-  const fetchUrl = `https://${domain}/api/2022-04/graphql.json`
+  const fetchUrl = `https://${domain}/api/2023-04/graphql.json`
 
   const fetchOptions = {
     endpoint: fetchUrl,
@@ -21,6 +20,7 @@ export async function callShopify(query, variables = {}) {
     )
     return data
   } catch (error) {
+    console.log(error)
     throw new Error("Could not fetch products!")
   }
 }

@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-function Header() {
+const Header = () => {
   return (
     <header className="border-b border-palette-lighter sticky top-0 z-20 bg-white">
       <Link href="/" passHref>
-        <div className="flex items-center justify-center mx-auto max-w-6xl px-6 py-4 md:pt-6">
+        <div className="flex justify-center mx-auto py-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-8 w-8"

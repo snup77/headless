@@ -3,7 +3,7 @@ import ProductCard from "../components/ProductCard"
 
 import {  callShopify, AllProducts } from "../helpers/shopify"
 
-export default function Home({ products }) {
+const Home = ({ products }) => {
 
   return (
     <Fragment>
@@ -11,11 +11,11 @@ export default function Home({ products }) {
         <h1 className="font-bold leading-tight text-palette-primary text-5xl mt-4 py-2 sm:py-4">
           Your Home, Reimagined
         </h1>
-        <p className="max-w-xl text-center px-2 mx-auto text-lg text-gray-600">
+        <p className="px-2 text-lg text-gray-600">
           Reimagine your living room with our sofas and chairs.
         </p>
       </div>
-      <div className="max-w-7xl flex flex-1 flex-wrap flex-row mx-auto px-6 pt-10">
+      <div className="max-w-7xl flex flex-wrap mx-auto px-6 pt-10">
       {
           products.map((product) => (
             <ProductCard key={product.node.id} product={product} />
@@ -36,3 +36,5 @@ export async function getStaticProps() {
     },
   }
 }
+
+export default Home

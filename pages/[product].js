@@ -2,7 +2,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { callShopify, Slugs, singleProduct, createCheckout } from "../helpers/shopify"
 
-function ProductDetails({ productData }) {
+const ProductDetails = ({ productData }) => {
   const [isLoading, setIsLoading] = useState(false)
 
   const imageNode = productData.images.edges[0].node
@@ -12,7 +12,8 @@ function ProductDetails({ productData }) {
   const productVariant = productData.variants.edges[0].node.id
 
   
-  async function checkout() {
+  const checkout = async () => {
+    console.log("function is called")
     setIsLoading(true)
     const response = await callShopify(createCheckout, { variantId: productVariant })
     const { webUrl } = response.data.checkoutCreate.checkout
