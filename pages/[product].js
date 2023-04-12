@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Image from "next/image"
-import { callShopify, Slugs, singleProduct, createCheckout } from "../helpers/shopify"
+import { callShopify, Slugs, singleProduct } from "../helpers/shopify"
 
 const ProductDetails = ({ productData }) => {
   const [isLoading, setIsLoading] = useState(false)
@@ -13,11 +13,38 @@ const ProductDetails = ({ productData }) => {
 
   
   const checkout = async () => {
-    console.log("function is called")
-    setIsLoading(true)
-    const response = await callShopify(createCheckout, { variantId: productVariant })
-    const { webUrl } = response.data.checkoutCreate.checkout
-    window.location.href = webUrl
+
+    const fetchUrl = "/api/checkout"
+
+    const fetchOptions = {
+      endpoint: fetchUrl,
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        variantId: productVariant,
+      }),
+    }
+
+    try {
+      setIsLoading(true)
+
+      const response = await fetch(fetchUrl, fetchOptions)
+
+      if (!response.ok) {
+        let message = await response.json()
+        message = message.error
+        throw new Error(message)
+      }
+
+      const data = await response.json()
+      const { checkoutURL } = data
+      window.location.href = checkoutURL
+
+    } catch (e) {
+        console.log(e)
+    }
 
   }
   

@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shopify + Next.js + Tailwind CSS storefront starter
 
-## Getting Started
+This is a production ready Headless Shopify storefront using Next.js, Shopify Storefront API (GraphQL), Tailwind CSS, and Vercel. This is a project from the "Learn Shopify + Next.js + Tailwind CSS" course available at [www.BuildNextShop.com](https://buildnextshop.com/)
 
-First, run the development server:
+## Topics Covered
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+* March 2022 Update: Bonus lectures covering Shopify’s Hydrogen 
+* February 2022 Update: Using SWR for automatically updating content on SSG (Static Site Generation) websites.
+* Blazing fast storefronts using Next.js for eCommerce.
+* Managing Cart data with React Context and localStorage.
+* Rapid component development with Tailwind CSS.
+* GraphQL query testing using the GraphiQL app.
+* Shopify Partners Account and Dashboard.
+* Shopify Storefront API (GraphQL).
+* Vercel for deployment.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Performance
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<table align="center">
+  <thead>
+    <tr>
+      <td>Overview</td>
+      <td>Performance Breakdown</td>
+    <tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td valign="top"><img width="300" src="https://cdn.shopify.com/s/files/1/0524/4390/6207/files/Screen_Shot_2021-09-05_at_7.01.58_PM.png?v=1630893822"/></td>
+    <td valign="top"><img width="300" src="https://cdn.shopify.com/s/files/1/0524/4390/6207/files/Screen_Shot_2021-09-05_at_7.02.38_PM.png?v=1630893822"/></td>
+  </tr>
+  </tbody>
+</table>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Future Updates:
+This is an ongoing project that is currently released in beta. Future updates will include:
+* Webhooks triggering for product updates, etc. 
+* Additional ecommerce ready sections for Next.js using Tailwind CSS (currently 5 are included with the course assets)
+* And much more! 
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Credits
+Big thank you to the **Shopify, Vercel, and Tailwind Labs** teams for making it so easy and pleasurable to create incredible storefronts with speed. 
