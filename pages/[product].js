@@ -43,7 +43,7 @@ const ProductDetails = ({ productData }) => {
       window.location.href = checkoutURL
 
     } catch (e) {
-        console.log(e)
+      throw new Error(e)
     }
 
   }
@@ -54,7 +54,7 @@ const ProductDetails = ({ productData }) => {
         px-4
         sm:py-12
         md:flex-row
-        py-4 w-full flex flex-1 flex-col my-0 mx-auto
+        py-4 w-full flex flex-col my-0 mx-auto
         max-w-7xl
       "
     >
